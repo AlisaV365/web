@@ -1,13 +1,13 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 hostName = "localhost"
-serverPort = 8080
+serverPort = 3000
 
 
 class MyServer(BaseHTTPRequestHandler):
 
     def do_GET(self):
-        with open('./category.html', "r", encoding="utf-8") as file:
+        with open('./contacts.html', "r", encoding="utf-8") as file:
             html_content = file.read()
         self.send_response(200)
         self.send_header("Content-type", "text/html")
